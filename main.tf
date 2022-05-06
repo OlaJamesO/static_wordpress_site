@@ -71,11 +71,11 @@ resource "null_resource" "trigger_build" {
 
 # Optional helper resources to update nameservers of newly-created Hosted Zone
 
-resource "aws_route53_zone" "apex" {
+/*resource "aws_route53_zone" "apex" {
   name = "jameso.tech"
 }
 
-/*resource "null_resource" "update_nameservers" {
+resource "null_resource" "update_nameservers" {
   triggers = {
     nameservers = aws_route53_zone.apex.id
   }
