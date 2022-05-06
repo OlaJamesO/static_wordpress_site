@@ -43,7 +43,7 @@ module "olajames_website" {
 
 module "docker_pullpush" {
   source         = "TechToSpeech/ecr-mirror/aws"
-  version        = "0.0.6"
+  version        = "0.0.7"
   aws_account_id = data.aws_caller_identity.current.account_id
   aws_region     = local.aws_region
   docker_source  = "wordpress:php7.4-apache"
