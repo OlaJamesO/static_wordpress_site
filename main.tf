@@ -22,7 +22,7 @@ module "olajames_website" {
   site_name           = local.site_name
   site_domain         = local.site_domain
   wordpress_subdomain = "wordpress"
-  hosted_zone_id      = aws_route53_zone.apex.id
+  hosted_zone_id      = "Z06850212T35C4K8MKBCL"
   s3_region           = local.aws_region
   slack_webhook       = "https://hooks.slack.com/services/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"
   ecs_cpu             = 1024
