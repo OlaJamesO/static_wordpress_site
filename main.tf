@@ -75,7 +75,7 @@ resource "aws_route53_zone" "apex" {
   name = "jameso.tech"
 }
 
-resource "null_resource" "update_nameservers" {
+/*resource "null_resource" "update_nameservers" {
   triggers = {
     nameservers = aws_route53_zone.apex.id
   }
@@ -83,4 +83,4 @@ resource "null_resource" "update_nameservers" {
     command = "aws route53domains update-domain-nameservers --region us-east-1 --domain-name ${local.site_domain} --nameservers Name=${aws_route53_zone.apex.name_servers.0} Name=${aws_route53_zone.apex.name_servers.1} Name=${aws_route53_zone.apex.name_servers.2} Name=${aws_route53_zone.apex.name_servers.3} --profile ${local.profile}"
   }
   depends_on = [aws_route53_zone.apex]
-}
+}*/
