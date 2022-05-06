@@ -8,7 +8,16 @@ terraform {
       configuration_aliases = [aws.ue1]
     }
   }
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "jameso"
+
+    workspaces {
+      name = "Example-Workspace"
+    }
 }
+}
+
 
 provider "aws" {
   region  = "eu-west-2"
