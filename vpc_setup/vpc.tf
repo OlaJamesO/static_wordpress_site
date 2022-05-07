@@ -27,7 +27,7 @@ resource "aws_vpc" "main" {
   }
 
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 
   enable_dns_hostnames = true
@@ -64,7 +64,7 @@ resource "aws_subnet" "main_public" {
     Visibility = "public"
   }
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 }
 
@@ -79,7 +79,7 @@ resource "aws_subnet" "main_private" {
     Visibility = "private"
   }
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 }
 
@@ -89,7 +89,7 @@ resource "aws_internet_gateway" "main" {
     Name = "main"
   }
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 }
 

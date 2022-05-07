@@ -33,3 +33,4 @@ override.tf.json
 terraform.rc
 terraform
 aws.tfvars
+text.txt
